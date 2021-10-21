@@ -1,0 +1,13 @@
+canvas {
+     border: 3px solid blue ;
+}
+
+.body {
+     background-color: blue;
+}
+
+.block {
+     background-color: #aaa;
+     width: auto;
+     height: 80px;
+}
