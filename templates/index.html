@@ -4,23 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>f1 data</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" defer></script>
-    <script src="js.js"></script>
+    <script src="{{url_for('static', filename='js.js')}}" defer></script>
     
 
 </head>
-<body>
-    <h1>true</h1>
+    <body>
+        <h1>f1 results - points</h1>
 
 
-    
-    <div>
-        <canvas id="myChart"></canvas>   
+    <div class="container">
+        <div class="chart_container">
+            <!-- <canvas id="chart" width="200" height="200"></canvas> -->    
+            <canvas id="chart"></canvas>
+        </div> 
+
+        <div class="button_container">
+            <button id='btn_0'  class="btn" value='2021'>2021</button>
+
+            <button id='btn_0'  class="btn" value='2020'>2020</button>
+
+            <button id='btn_0'  class="btn" value='2019'>2019</button>
+
+            <button id='btn_0'  class="btn" value='2018'>2018</button>
+
+            <button id='btn_0'  class="btn" value='2017'>2017</button>
+
+            <button id='btn_0'  class="btn" value='2016'>2016</button>
+
+            <button id='btn_0'  class="btn" value='2015'>2015</button>
+
+            <button id='btn_0'  class="btn" value='2014'>2014</button>
+
+            <button id='btn_0'  class="btn" value='2013'>2013</button>
+
+            <button id='btn_0'  class="btn" value='2012'>2012</button>
+
+            <button id='btn_0'  class="btn" value='2011'>2011</button>
+
+            <!-- <span></span> -->
+
+        </div>
     </div>
-    
+        
 
 
-    
-</body>
+        
+    </body>
 </html>

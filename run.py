@@ -3,10 +3,10 @@
 # connect py
     
     # cd *DRAG PROJECT FOLDER INTO TERMINAL*
-    # env\Scripts\activate.bat
-    # set FLASK_APP=run.py
-    # set FLASK_DEBUG=1
-    # py -m flask run
+    # env\Scripts\activate.bat 
+    # set FLASK_APP=run.py 
+    # set FLASK_DEBUG=1 
+    # py -m flask run 
 
 from flask import Flask, render_template, request
 import sqlite3
@@ -16,8 +16,31 @@ app = Flask(__name__)
 RESULTSDB = 'results.db'
 
 @app.route('/')
-def landing():
-    return render_template('landing.html')
+def index():
+    return render_template('index.html')
+
+raceresults = []
+
+
+
+
+'''
+$connect = mysqli_connect("dbhost","dbname","user","pass");
+
+$output = '';
+if(isset($_POST["query"])) {
+    $search = mysqli_real_escape_string($connect, $_POST["query"]);
+    $query = "SELECT * FROM `Developers` WHERE `country` LIKE '%".$search."%' ";
+}
+
+$result = mysqli_query($connect, $query);
+
+if ($result) {
+    $output='<table></table>';
+}
+
+echo "$output";
+'''
 
 
 '''
