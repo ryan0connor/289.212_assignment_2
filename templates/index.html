@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>f1 data</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" defer></script>
-    <script src="{{url_for('static', filename='js.js')}}" defer></script>
     
 
 </head>
@@ -20,28 +18,64 @@
             <canvas id="chart"></canvas>
         </div> 
 
+    <div class="select_box">
+        <select id="years">
+            <option value="262.5, 256.5, 177, 145, 145, 116.5, 116, 95, 74, 58, 46, 35, 26, 18, 16, 7, 6, 1, 0, 0, 0">2021</option>
+            <option value="347, 223, 214, 125, 119, 105, 105, 98, 97, 75, 75, 62, 33, 32, 10, 4, 4, 3, 2, 1, 0, 0, 0">2020</option>
+            <option value="2019">2019</option>
+        </select>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" defer></script>
+    <script src="{{url_for('static', filename='js.js')}}" defer></script>
+<!--
+
         <div class="button_container">
-            <button id='btn_0'  class="btn" value='2021'>2021</button>
+            <button id='btn_2021'  class="btn" value='2021'>2021</button>
 
-            <button id='btn_0'  class="btn" value='2020'>2020</button>
+            <button id='btn_2020'  class="btn" value='2020'>2020</button>
 
-            <button id='btn_0'  class="btn" value='2019'>2019</button>
+            <button id='btn_2019'  class="btn" value='2019'>2019</button>
 
-            <button id='btn_0'  class="btn" value='2018'>2018</button>
+            <button id='btn_2018'  class="btn" value='2018'>2018</button>
 
-            <button id='btn_0'  class="btn" value='2017'>2017</button>
+            <button id='btn_2017'  class="btn" value='2017'>2017</button>
 
-            <button id='btn_0'  class="btn" value='2016'>2016</button>
+            <button id='btn_2016'  class="btn" value='2016'>2016</button>
 
-            <button id='btn_0'  class="btn" value='2015'>2015</button>
+            <button id='btn_2015'  class="btn" value='2015'>2015</button>
 
-            <button id='btn_0'  class="btn" value='2014'>2014</button>
+            <button id='btn_2014'  class="btn" value='2014'>2014</button>
 
-            <button id='btn_0'  class="btn" value='2013'>2013</button>
+            <button id='btn_2013'  class="btn" value='2013'>2013</button>
 
-            <button id='btn_0'  class="btn" value='2012'>2012</button>
+            <button id='btn_2012'  class="btn" value='2012'>2012</button>
 
-            <button id='btn_0'  class="btn" value='2011'>2011</button>
+            <button id='btn_2011'  class="btn" value='2011'>2011</button>
+
+            <button onclick="change_year('2021')">2021</button>
+            <button onclick="change_year('2020')">2021</button>
+            <button onclick="change_year('2019')">2021</button>
+            <button onclick="change_year('2018')">2021</button>
+            <button onclick="change_year('2017')">2021</button>
+            <button onclick="change_year('2016')">2021</button>
+
+
+            <button type="button" onclick="proceed();">do</button> 
+
+
+        <form method="POST" action="/results" >
+
+            <div class="grid-item1"><input type="checkbox" onclick="onlyOne(this)" value="2021" name="check"/>
+                <br />2021</div>
+
+         <input type="submit" value='submit' class="button"/>
+        </form>
+
+
+    -->
+
+
 
             <!-- <span></span> -->
 

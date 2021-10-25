@@ -8,6 +8,7 @@
     # set FLASK_DEBUG=1 
     # py -m flask run 
 
+import re
 from flask import Flask, render_template, request
 import sqlite3
 app = Flask(__name__)
@@ -16,57 +17,8 @@ app = Flask(__name__)
 RESULTSDB = 'results.db'
 
 @app.route('/')
-def index():
+def results():
     return render_template('index.html')
 
-raceresults = []
 
 
-
-
-'''
-$connect = mysqli_connect("dbhost","dbname","user","pass");
-
-$output = '';
-if(isset($_POST["query"])) {
-    $search = mysqli_real_escape_string($connect, $_POST["query"]);
-    $query = "SELECT * FROM `Developers` WHERE `country` LIKE '%".$search."%' ";
-}
-
-$result = mysqli_query($connect, $query);
-
-if ($result) {
-    $output='<table></table>';
-}
-
-echo "$output";
-'''
-
-
-'''
-
-var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('results.db');
-
-let reportingTag = [];
-
-let sql = SELECT * FROM ?;
-
-db.all(sql, [], (err, rows) => {
-  if (err) {
-    throw err;
-  }
-  rows.forEach((row) => {
-    reportingTag.push(row.reportingTag);
-  });
-  
-  console.log(reportingTag);
-
-});
-
-
-
-// close the database connection
-db.close();
-
-'''
